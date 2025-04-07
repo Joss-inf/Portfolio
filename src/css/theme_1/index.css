@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+  
+body {
+    font-family: Arial, sans-serif;
+    background:#007e9d;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+  
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffa600;
+    position: absolute;
+    transform: translatey(-90%)
+  }
+.navbar:hover{
+    transform: translatey(0%)
+}
+.logo {
+    margin-left:60px ;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    
+}
+  
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 50vw;
+    min-width: 50px;
+    border-radius: 5px;
+    margin: 25px;
+    padding: 20px;
+    box-shadow: 
+    rgba(0, 0, 0, 0.10) 0px 14px 20px,
+    rgba(0, 0, 0, 0.12) 0px -10px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  
+  .nav-links li {
+      margin: 0 15px;
+   
+  }
+  
+  .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+      color: #ff9900;
+  }
+  
+  .burger {
+      display: none;
+      font-size: 2em;
+      color: white;
+      cursor: pointer;
+  }
+
+  iframe{
+    width: 100vw;
+    height: calc(100vh - 20px);
+    margin:0; 
+    padding: 0; 
+    border: 0;
+    bottom: 0;
+}
+
+  @media screen and (max-width: 768px) {
+ 
+    .nav-wrapper{
+        display: flex;
+        position: absolute;
+        right:0;
+        top:70px;
+        display: block;
+        pointer-events: none
+    }
+
+    .nav-links.nav-active {
+        transform: translateX(100%);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    
+    .nav-links {
+     
+        margin: 0;
+        display: flex;
+        background: #ffa600;
+        flex-direction: column;
+        border-radius:0;
+        height: 100vh;
+        box-shadow: none;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        pointer-events:all;
+    }
+      .nav-links li {
+          text-align: center;
+          padding: 10px 0;
+      }
+  
+      .burger {
+        margin-right:10px ;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        display: block;
+      }
+  }
+
+

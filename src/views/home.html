@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<audio id="audio" src="./assets/audio/onclick.mp3"></audio>
+<section>
+    <div id="start" class="container">
+        <div class="wrapper a">
+            BIENVENUE
+            <div class="subtitle">
+                sur mon portfolio de développeur web
+            </div>
+            <button id="direction" onclick="scrollToSection('presentation')" class="arrow-btn"></button>
+        </div>
+    </div> 
+    <div id="presentation" class="presentation">
+        <div class="a2">
+            <p class="title">Presentation</p>
+            <p class="speech">Bonjour,<br>je m'appelle Josselin BESSIERE.<br>Titulaire d'un BTS CRSA obtenu en 2021,<br>
+            Je n'aimais ni les débouchés ni le travail associé à celui-ci et donc décida de trouver un autre domaine professionnel .<br>Au bout d'un certain temps j'ai trouvé que l'informatique était un domaine particulièrement plaisant pour moi.<br>
+            J'ai donc suivi une formation de mise à niveau à l'ETNA entre 2022 et 2023 (JS, TS, PHP, HTML, CSS, SQL, Angular, Laravel) puis je me suis inscrit à l'ESIEE IT en 2024 pour un bachelor en développement web.
+            Je suis actuellement en recherche d'une Alternance pour Septembre 2025 pour une durée de 2 ans.
+            </p>
+            <div style="display: flex;">
+                <button id="direction" onclick="scrollToSection('presentation1')" class="arrow-btn"></button>
+                <div style="margin: 4px;"></div>
+                <button id="direction" onclick="scrollToSection('start')" class="arrow-btn inversed"></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="presentation1" class="presentation">
+        <div class="a3">
+            <p class="title">Mes compétences</p>
+            <div class="speech">
+                <p style = "font-weight: bold;">Langages</p>
+                <ul class="list-comp">
+                    <li>Javascript</li>
+                    <li>Typescript</li>
+                    <li>HTML5</li>
+                    <li>PHP</li>
+                    <li>SQL</li>
+                    <li>Python</li>
+                    <li>Java (les bases: agrégations, compositions, délégations, interface, classes abstraites)</li>
+                </ul>
+            </div>
+            <div class="speech">
+                <p  style = "font-weight: bold;">Soft Skills</p>
+                <ul class="soft-skills">
+                    <li>Communication (demande de l'aide ou aide les autres)</li>
+                    <li>Résolution de problèmes (réflexion seul ou en équipe)</li>
+                    <li>attitude (respect d'autrui , )
+                    </li>
+                    <li>Adaptabilité</li>
+                    <li>travail d'équipe au top (ne rejette pas la faute sur les autres)</li>
+                </ul>
+            </div>
+            <div style="display: flex;">
+                <button id="direction" onclick="scrollToSection('')" class="arrow-btn"></button>
+                <div style="margin: 4px;"></div>
+                <button id="direction" onclick="scrollToSection('presentation')" class="arrow-btn inversed"></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
