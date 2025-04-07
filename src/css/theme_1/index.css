@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
   
 body {
@@ -19,10 +18,12 @@ body {
     align-items: center;
     background: #ffa600;
     position: absolute;
-    transform: translatey(-90%)
+    transform: translatey(-90%);
+    transition: opacity 0.2s ease, transform 0.2s ease;
   }
 .navbar:hover{
-    transform: translatey(0%)
+    transform: translatey(0%);
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 .logo {
     margin-left:60px ;
