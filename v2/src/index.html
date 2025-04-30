@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio showcasing my projects and skills." />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="./styles/index.css" />
+  <script type="module" async src="./script/script.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class='element'></div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" class="parallax" style="background-image: url('assets/s_a.jpg')">
+      <h1>BIENVENUE SUR MON PORTFOLIO</h1>
+    </section>
+
+    <section id="projects" class="parallax" style="background-image: url('assets/s_b.jpg')">
+      <div class="project-scroll">
+        <div class="project title">
+          <h2>PROJETS</h2>
+          <p>si les projets ne scroll pas cliquez moi puis retenté !</p>
+        </div>
+        <div class="project">projet 1</div>
+        <div class="project">projet 2</div>
+        <div class="project">projet 3</div>
+        <div class="project">projet 4</div>
+        <div class="project">projet 5</div>
+      </div>
+    </section>
+
+    <section id="contact" class="parallax" style="background-image: url('assets/s_c.jpg')">
+      <h1>CONTACTEZ-MOI</h1>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Your Name. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  html,
+  body {
+    height: 100%;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #000;
+    color: white;
+  }
+
+  /* ----- NAVIGATION ----- */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(40px);
+    background-color: rgba(255, 255, 255, 0.20);
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+    transition: transform 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    transform: scale(1.2);
+  }
+
+  /* ----- SECTIONS ----- */
+  section {
+    height: 100vh;
+    scroll-snap-align: center;
+    scroll-margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px -4px 10px rgba(255, 255, 255, 0.700);
+    color: white;
+    text-align: center;
+    text-shadow: 5px 5px 5px #00000075;
+  }
+
+  /* ----- PARALLAX ----- */
+  @keyframes parallaxScroll {
+    0% {
+      background-position: center 0%;
+    }
+
+    100% {
+      background-position: center 100%;
+    }
+  }
+
+  @supports (animation-timeline: scroll()) {
+    .parallax {
+      animation: parallaxScroll linear;
+      animation-timeline: scroll();
+      animation-range: entry 0% exit 100%;
+    }
+  }
+
+  .parallax {
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* ----- TITRE RESPONSIVE ----- */
+  section h1 {
+    font-size: clamp(50px, 5vw, 80px);
+    line-height: 1.2;
+
+  }
+
+  /* ----- FOOTER ----- */
+  footer {
+    scroll-snap-align: start;
+    text-align: center;
+    padding: 1rem;
+    background-color: #f1f1f1;
+    color: #000;
+  }
+
+  #projects {
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    height: 100vh;
+    overflow: hidden;
+    /* important */
+  }
+
+  .project-scroll {
+    height: 100%;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+  }
+
+  .project-scroll .title {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .project {
+    height: 100%;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(30px, 4vw, 60px);
+    text-shadow: 3px 3px 5px black;
+  }
+</style>
