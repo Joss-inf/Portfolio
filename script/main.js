@@ -32,7 +32,7 @@ import { ObserverManager } from "./ObserverManager.js"
 import { NavbarHighlighter } from "./navbagHighlight.js"
 import { ParallaxEffect } from "./parallalax.js"
 import { TextRevealer } from "./TextRevealer.js"
-
+import {Gallery} from './gallery.js';
 const tools =  new toolbox()
 tools.applyYear()
 tools.toggleMenuObs()
@@ -67,8 +67,7 @@ const observerConfigs = [
         thresholdOut: 0,
         repeat: false,
         onEnter: async (el) => {
-            const module = await import('./gallery.js');
-            new module.Gallery('pictures', './assets/gallery/', 20, 200, 350);
+            new Gallery('pictures', './assets/gallery/', 20, 200, 350);
         },
     },
     {
