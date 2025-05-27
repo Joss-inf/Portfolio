@@ -206,7 +206,7 @@ export const projectsData = [
                 },
                 {
                     title: "Technologies",
-                    content: `PHP, JavaScript, SQL`,
+                    content: `Python, LinuxVM Oracle, Service Linux`,
                     image: "./assets/template/techno.webp",
                     alt: 'techno'
                 },
