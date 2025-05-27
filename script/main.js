@@ -22,17 +22,17 @@
  * @requires ./ObserverManager.js
  * @requires ./navbagHighlight.js
  * @requires ./parallalax.js
- * @requires ./TextRevealer.js
+ * @requires ./textRevealer.js
  * @requires ./gallery.js
  */
 import { projectsData } from "./projectData.js"
 import { toolbox } from "./toolbox.js"
 import { ProjectCarousel } from "./projectCarousel.js"
-import { ObserverManager } from "./ObserverManager.js"
+import { ObserverManager } from "./observerManager.js"
 import { NavbarHighlighter } from "./navbagHighlight.js"
 import { ParallaxEffect } from "./parallalax.js"
-import { TextRevealer } from "./TextRevealer.js"
-import {Gallery} from './gallery.js';
+import { TextRevealer } from "./textRevealer.js"
+import { Gallery } from './gallery.js';
 const tools =  new toolbox()
 tools.applyYear()
 tools.toggleMenuObs()
