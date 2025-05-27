@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio showcasing my projects and skills in Web Dev." />
+  <meta name="description" content="Portfolio showcasing my projects and skills in Web development." />
+  <meta property="og:image" content="https://joss-inf.github.io/Portfolio/assets/background/welcome.webp">
   <title>BESSIERE Josselin</title>
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
@@ -51,7 +52,7 @@
   </header>
 
   <main>
-
+    <img class = 'overload' src="assets/template/profile.webp" alt="Photo de profil" />
     <section id="welcome">
       <div class="parallax px-welcome">
         <span>BIENVENUE</span>
@@ -307,7 +308,9 @@
       z-index: 9999;
       transition: opacity 1s ease;
     }
-
+    .overload{
+      display: none;
+    }
     .bar {
       width: 10px;
       height: 40px;
