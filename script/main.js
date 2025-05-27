@@ -28,7 +28,7 @@
 import { projectsData } from "./projectData.js"
 import { Toolbox } from "./toolbox.js"
 import { ProjectCarousel } from "./projectCarousel.js"
-import { ObserverManager } from "./observerManager.js"
+import { ManagerObs } from "./managerObs.js"
 import { NavbarHighlighter } from "./navbarHighlighter.js"
 import { ParallaxEffect } from "./parallalax.js"
 import { TextRevealer } from "./textRevealer.js"
@@ -86,4 +86,4 @@ const observerConfigs = [
     }
 ];
 
-new ObserverManager(observerConfigs);
+new ManagerObs(observerConfigs);
