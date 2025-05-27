@@ -19,7 +19,7 @@
  * @requires ./projectData.js
  * @requires ./toolbox.js
  * @requires ./projectCarousel.js
- * @requires ./ObserverManager.js
+ * @requires ./observerManager.js
  * @requires ./navbagHighlight.js
  * @requires ./parallalax.js
  * @requires ./textRevealer.js
@@ -86,4 +86,4 @@ const observerConfigs = [
     }
 ];
 
-const observerManager = new ObserverManager(observerConfigs);
+new ObserverManager(observerConfigs);
