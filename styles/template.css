@@ -388,7 +388,7 @@ h2 {
 
 .carousel-controls button {
     pointer-events: all;
-    backdrop-filter:hue-rotate(-180deg);
+    backdrop-filter: hue-rotate(-180deg);
     background-color: rgba(255, 255, 255, 0.025);
     color: rgb(255, 255, 255);
     border: none;
@@ -401,7 +401,8 @@ h2 {
     padding-bottom: 8px;
     border: solid rgba(128, 128, 128, 0.274);
 }
-.carousel-controls button:active{
+
+.carousel-controls button:active {
     transform: scale(1.05);
     animation: transform 0.1s linear;
 }
@@ -533,14 +534,14 @@ h2 {
 .reveal-text {
     opacity: 0;
     transform: translateY(60px);
-    pointer-events:none;
+    pointer-events: none;
     transition: opacity 0.9s ease, transform 1s ease;
     will-change: opacity, transform;
 }
 
 .reveal-text.visible {
     opacity: 1;
-    pointer-events:auto;
+    pointer-events: auto;
     transform: translateY(0);
 }
 
@@ -556,6 +557,8 @@ h2 {
     font-size: 1rem;
     line-height: 1.8;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    overflow-y: auto;
 }
 
 .glass-container {
@@ -922,9 +925,9 @@ footer {
 
 @media (max-width: 768px) {
     .presentation-box {
-        margin: 1.5rem;
-        padding: 1.5rem;
-        font-size: 0.95rem;
+        margin: 0.2rem;
+        padding: 0.8rem;
+        font-size: 0.95rem
     }
 
     .modal .close {
