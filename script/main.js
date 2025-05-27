@@ -25,7 +25,7 @@
  * @requires ./textRevealer.js
  * @requires ./gallery.js
  */
-import { projectsData } from "./projectData.js"
+import { projectsData } from "./config.js"
 import { Toolbox } from "./toolbox.js"
 import { ProjectCarousel } from "./projectCarousel.js"
 import { ManagerObs } from "./managerObs.js"
@@ -39,10 +39,12 @@ tools.toggleMenuObs()
 const parallaxEffect = new ParallaxEffect(0.5);
 const textRevealer = new TextRevealer('visible');
 const highlighter = new NavbarHighlighter('#nav-links');
+console.log("projectsData test", projectsData);
+const project = projectsData
 new ProjectCarousel({
     containerSelector: ".donut-carousel",
     modalSelector: "#modal",
-    projects: projectsData
+    projects: project
 });
 const observerConfigs = [
     {

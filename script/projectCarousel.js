@@ -87,7 +87,7 @@
 /**
  * @method popup
  * @description Displays the modal with project details and handles section navigation
- * @param {Object} projectData - Project data to display in the modal
+ * @param {Object} projects - Project data to display in the modal
  */
 export class ProjectCarousel {
     constructor({ containerSelector, modalSelector, projects }) {
@@ -221,7 +221,7 @@ export class ProjectCarousel {
 
             slide.style.transform += " rotateY(180deg)";
 
-            setTimeout(() => this.popup(projectsData[((this.current % this.total) + this.total) % this.total]
+            setTimeout(() => this.popup(this.projects[((this.current % this.total) + this.total) % this.total]
             ), 40);
         });
 
@@ -231,13 +231,14 @@ export class ProjectCarousel {
             this.updateCarousel();
         });
     }
-    popup(projectData) {
+    popup(project) {
+        
         const modal = document.getElementById('modal');
         const modalContent = modal.querySelector('.content');
         const modalImg = modal.querySelector('img');
         const valueDisplay = document.getElementById("value");
         const slider = document.getElementById('slider');
-        const sections = projectData.modal?.sections || [];
+        const sections = project.modal?.sections || [];
 
         slider.min = 0;
         slider.max = sections.length - 1;
