@@ -17,7 +17,7 @@
  * @method applyYear
  * @description Updates the year element with the current year
  */
-export class toolbox {
+export class Toolbox {
     constructor() {
 
     }

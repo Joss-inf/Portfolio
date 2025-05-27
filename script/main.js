@@ -26,14 +26,14 @@
  * @requires ./gallery.js
  */
 import { projectsData } from "./projectData.js"
-import { toolbox } from "./toolbox.js"
+import { Toolbox } from "./toolbox.js"
 import { ProjectCarousel } from "./projectCarousel.js"
 import { ObserverManager } from "./observerManager.js"
-import { NavbarHighlighter } from "./navbagHighlight.js"
+import { NavbarHighlighter } from "./navbarHighlighter.js"
 import { ParallaxEffect } from "./parallalax.js"
 import { TextRevealer } from "./textRevealer.js"
 import { Gallery } from './gallery.js';
-const tools =  new toolbox()
+const tools =  new Toolbox()
 tools.applyYear()
 tools.toggleMenuObs()
 const parallaxEffect = new ParallaxEffect(0.5);
