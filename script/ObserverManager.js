@@ -82,9 +82,7 @@ export class ObserverManager {
             const el = entry.target;
             const cfg = this.targets.get(el);
             if (!cfg) return;
-
             const ratio = entry.intersectionRatio;
-
             if (ratio >= cfg.thresholdIn) {
                 if (!cfg.repeat && cfg.triggered) return;
                 cfg.onEnter?.(el);
