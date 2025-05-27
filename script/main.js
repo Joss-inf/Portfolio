@@ -39,7 +39,7 @@ tools.toggleMenuObs()
 const parallaxEffect = new ParallaxEffect(0.5);
 const textRevealer = new TextRevealer('visible');
 const highlighter = new NavbarHighlighter('#nav-links');
-console.log("projectsData test", projectsData);
+
 const project = projectsData
 new ProjectCarousel({
     containerSelector: ".donut-carousel",
