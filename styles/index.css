@@ -860,6 +860,7 @@ background: radial-gradient(circle,rgba(63, 154, 251, 1) 0%, rgba(70, 191, 252, 
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     z-index: 9999;
     cursor: pointer;
 }
@@ -877,16 +878,6 @@ background: radial-gradient(circle,rgba(63, 154, 251, 1) 0%, rgba(70, 191, 252, 
     image-rendering: crisp-edges;
 }
 
-.lightbox .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 3rem;
-    color: white;
-    cursor: pointer;
-    user-select: none;
-    z-index: 10000;
-}
 
 footer {
     height: 100vh;
@@ -978,16 +969,6 @@ footer {
         margin: 0.2rem;
         padding: 0.8rem;
         font-size: 0.95rem
-    }
-
-    .modal .close {
-        top: auto;
-        bottom: 70px;
-    }
-
-    .lightbox .close {
-        top: auto;
-        bottom: 60px;
     }
 
     .warp-presentation {
