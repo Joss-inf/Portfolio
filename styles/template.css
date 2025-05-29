@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', 'Arial', sans-serif;
-    scrollbar-color: #97979780 #ffffff17;
+    scrollbar-color: #2e2e2edd #ffffffb1;
     scrollbar-width: thin;
 
 }
@@ -17,9 +17,6 @@ body {
     background: rgb(113, 113, 113);
 }
 
-main {
-    overflow: hidden;
-}
 
 nav {
     display: flex;
@@ -61,7 +58,6 @@ nav ul li a:hover {
     justify-content: center;
     position: relative;
     z-index: 100;
-
 }
 
 .burger {
@@ -159,8 +155,7 @@ section {
     align-items: center;
     text-align: center;
     text-shadow: 5px 5px 5px #00000075;
-    z-index: 1;
-
+    
 }
 
 section::after {
@@ -256,22 +251,32 @@ section::after {
             #C884A6 0% 33.33%,
             #E7BBE3 33.33% 66.66%,
             #d376cb 66.66% 100%);
+
 }
 
 .px-footer {
-    background: cadetblue
-}
+    background: cadetblue;
 
+}
+#welcome {
+  z-index: 7;
+  background-color: #4B88A2 66.66% 100%;
+}
 #about {
     flex-direction: column;
+    z-index: 6;
+    background-color: #DE7C5A 66.66% 100%;
 }
 
 #about .card span {
     font-size: 2em;
+    
 }
 
 #projects {
     flex-direction: column;
+    z-index: 5;
+    background-color:#8EA604 66.66% 100%;
 }
 
 #projects>h2 {
@@ -280,7 +285,18 @@ section::after {
     font-size: clamp(30px, 5vw, 50px);
     z-index: 1;
 }
-
+#gallery {
+    z-index: 4;
+    background-color:#0496FF 66.66% 100%;
+}
+#conception {
+    z-index: 3;
+    background-color:#67c5ff 66.66% 100%;
+}
+#ressource {
+    z-index: 2;
+    background-color:#d376cb 66.66% 100%;
+}
 h2 {
     padding: 20px;
 }
@@ -394,11 +410,10 @@ h2 {
     border: none;
     font-size: 4rem;
     cursor: pointer;
-    width: inherit;
     border-radius: 10em;
     width: 120px;
-    aspect-ratio: 1/1;
-    padding-bottom: 8px;
+
+   
     border: solid rgba(128, 128, 128, 0.274);
 }
 
@@ -850,6 +865,7 @@ footer {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    z-index: 1;
 }
 
 .footer-content {
