@@ -37,12 +37,16 @@
  * Destroys the observer manager, disconnecting all observers and clearing targets
  * @public
  */
+
 export class ManagerObs {
     constructor(configs = []) {
         this.targets = new Map();
         this.observer = new IntersectionObserver(
             this.handleIntersect.bind(this),
-            { threshold: this.getThresholds(configs) }
+            {
+                threshold: this.getThresholds(configs),
+                rootMargin: this.getRootMargin(configs)
+            }
         );
         this.init(configs);
     }
@@ -54,6 +58,10 @@ export class ManagerObs {
             thresholds.add(cfg.thresholdOut ?? 0);
         });
         return [...thresholds].sort();
+    }
+
+    getRootMargin(configs) {
+        return configs.find(cfg => cfg.rootMargin)?.rootMargin || '0px';
     }
 
     init(configs) {
@@ -70,6 +78,8 @@ export class ManagerObs {
                     repeat: cfg.repeat ?? true,
                     thresholdIn: cfg.thresholdIn ?? 0,
                     thresholdOut: cfg.thresholdOut ?? 0,
+                    rootMargin: cfg.rootMargin ?? '0px',
+                    compareTo: cfg.compareTo ?? 'sectionSize', // 'viewport' ou 'sectionSize'
                     triggered: false,
                 });
                 this.observer.observe(el);
@@ -78,21 +88,40 @@ export class ManagerObs {
     }
 
     handleIntersect(entries) {
-        entries.forEach(entry => {
-            const el = entry.target;
-            const cfg = this.targets.get(el);
-            if (!cfg) return;
-            const ratio = entry.intersectionRatio;
-            if (ratio >= cfg.thresholdIn) {
+    const viewportHeight = window.innerHeight;
+
+    entries.forEach(entry => {
+            
+        const el = entry.target;
+        const cfg = this.targets.get(el);
+        if (!cfg) return;
+
+        const visibleHeight = entry.intersectionRect.height;
+        const ratioViewport = visibleHeight / viewportHeight;
+        const ratioSection = entry.intersectionRatio;
+        if (cfg.compareTo === 'viewport') {
+            if (ratioViewport >= cfg.thresholdIn) {
                 if (!cfg.repeat && cfg.triggered) return;
                 cfg.onEnter?.(el);
                 cfg.triggered = true;
-            } else if (ratio <= cfg.thresholdOut) {
+            } else if (ratioViewport <= cfg.thresholdOut) {
                 cfg.onExit?.(el);
                 if (cfg.repeat) cfg.triggered = false;
             }
-        });
-    }
+            return;
+        }
+
+        // default: section size
+        if (ratioSection >= cfg.thresholdIn) {
+            if (!cfg.repeat && cfg.triggered) return;
+            cfg.onEnter?.(el);
+            cfg.triggered = true;
+        } else if (ratioSection <= cfg.thresholdOut) {
+            cfg.onExit?.(el);
+            if (cfg.repeat) cfg.triggered = false;
+        }
+    });
+}
 
     destroy() {
         this.observer.disconnect();

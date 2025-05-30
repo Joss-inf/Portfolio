@@ -35,7 +35,7 @@ export const projectsData = [
                 {
                     title: "Qu'est-ce donc ?",
                     content: `Ecostat est mon projet personnel qui permet de consulter la pollution des entreprises en France`,
-                    image: "./assets/template/interro.webp",
+                    image: "./assets/gallery/img1.webp",
                     alt: 'interro'
                 },
                 {
@@ -75,7 +75,7 @@ export const projectsData = [
                 {
                     title: "Qu'est-ce donc ?",
                     content: `PharmaHub est un gestionnaire de commande client qui permet de regrouper plusieurs pharmacie sur un même site`,
-                    image: "./assets/template/interro.webp",
+                    image: "./assets/gallery/img11.webp",
                     alt: 'interro'
                 },
                 {
@@ -93,7 +93,7 @@ export const projectsData = [
                 {
                     title: "Organisation",
                     content: `Trello, UserStory, méthode agile`,
-                    image: "./assets/template/organisation.webp",
+                    image: "./assets/gallery/img7.webp",
                     alt: 'organisation'
                 },
                 {
@@ -115,7 +115,7 @@ export const projectsData = [
                 {
                     title: "Qu'est-ce donc ?",
                     content: ` Jeu mobile subway surfer like, le concept est d'éviter des obstacles tombant du ciel tout en grimpant un immeuble `,
-                    image: "./assets/template/interro.webp",
+                    image: "./assets/gallery/img3.webp",
                     alt: 'interro'
                 },
                 {
@@ -155,7 +155,7 @@ export const projectsData = [
                 {
                     title: "Qu'est-ce donc ?",
                     content: `Memory est un projet web permettant de jouer aux jeu du memory, il contient un leaderboard avec des scores.`,
-                    image: "./assets/template/interro.webp",
+                    image: "./assets/gallery/img17.webp",
                     alt: 'interro'
                 },
                 {
@@ -195,7 +195,7 @@ export const projectsData = [
                 {
                     title: "Qu'est-ce donc ?",
                     content: `Le projet  permet de collecter des métriques (ram, cpu) entre un collector(serveur) et plusieurs agent (machine à surveiller)`,
-                    image: "./assets/template/interro.webp",
+                    image: "./assets/gallery/img13.webp",
                     alt: 'interro'
                 },
                 {

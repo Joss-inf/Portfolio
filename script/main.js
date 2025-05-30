@@ -33,13 +33,13 @@ import { NavbarHighlighter } from "./navbarHighlighter.js"
 import { ParallaxEffect } from "./parallalax.js"
 import { TextRevealer } from "./textRevealer.js"
 import { Gallery } from './gallery.js';
-const tools =  new Toolbox()
+const tools = new Toolbox()
 tools.applyYear()
 tools.toggleMenuObs()
 const parallaxEffect = new ParallaxEffect(0.5);
 const textRevealer = new TextRevealer('visible');
-const highlighter = new NavbarHighlighter('#nav-links');
-
+new NavbarHighlighter('#nav-links');
+new Gallery('pictures', './assets/gallery/', 20, 200, 350);
 const project = projectsData
 new ProjectCarousel({
     containerSelector: ".donut-carousel",
@@ -57,35 +57,13 @@ const observerConfigs = [
     },
     {
         selector: '.reveal-text',
-        thresholdIn: 0.7,
-        thresholdOut: 0.3,
+        thresholdIn: 0.01,
+        thresholdOut: 0.99,
         repeat: true,
         onEnter: el => textRevealer.onEnter(el),
         onExit: el => textRevealer.onExit(el),
-    },
-    {
-        selector: '#pictures',
-        thresholdIn: 0,
-        thresholdOut: 0,
-        repeat: false,
-        onEnter: async (el) => {
-            new Gallery('pictures', './assets/gallery/', 20, 200, 350);
-        },
-    },
-    {
-        selector: 'section[id]',
-        thresholdIn: 0.7,
-        thresholdOut: 0.3,
-        repeat: true,
-        onEnter: el => {
-            const id = el.getAttribute('id');
-            highlighter.highlight(id);
-        },
-        onExit: el => {
-            const id = el.getAttribute('id');
-            highlighter.removeHighlight(id);
-        }
     }
+    
 ];
 
 new ManagerObs(observerConfigs);

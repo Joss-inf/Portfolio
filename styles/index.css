@@ -74,7 +74,7 @@ h2 {
     opacity: 0;
     transform: translateY(60px);
     pointer-events: none;
-    transition: opacity 1s ease, transform 1s ease;
+    transition: opacity 2s ease, transform 1s ease;
     will-change: opacity, transform;
 }
 
@@ -173,7 +173,7 @@ footer {
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -188,7 +188,7 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     z-index: -1;
     backface-visibility: hidden;
@@ -204,8 +204,8 @@ section {
     text-shadow: none;
     color: rgba(255, 255, 255, 0.109);
     font-weight: 600;
-    font-size: 14.1vw;
-    height: 33.33vh;
+    font-size: 12vw;
+    height: 100%;
 }
 
 .px-welcome {
@@ -549,7 +549,7 @@ button:active {
 
 .warp-presentation {
     overflow-y: auto;
-    height: 99.9vh;
+
     width: 100vw;
     display: flex;
     flex-wrap: wrap;
@@ -676,10 +676,10 @@ button:active {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.2);
     text-align: left;
-    max-height: 90vh;
     overflow: auto;
     width: auto;
     text-shadow: none;
+    margin: 10px 0 10px 0;
 }
 
 .header {
@@ -821,7 +821,7 @@ button:active {
     flex-wrap: wrap;
     column-gap: 1em;
     padding: 1em;
-    height: 99.9vh;
+    
     width: 100vw;
     margin: 0 auto;
     overflow-y: auto;
@@ -986,13 +986,20 @@ footer {
 }
 
 @media (max-width:480px) {
+    .projects-wrapper{
+        margin-top: 200px;
+    }
     button{
-        margin-top: 130px;
+        margin-top: 200px;
     }
     #carousel-left {
-
         margin-right: 0px;
     }
+    #carousel-right {
+        margin-left: 0px;
+    }
+    
+    
 }
 
 @media (max-width: 768px),
@@ -1016,10 +1023,10 @@ footer {
         position: fixed;
         flex-direction: column;
         justify-content: center;
-        top: 0px;
+        bottom: 0;
         right: 10px;
-        height: calc(100vh - 100px);
-        width: 50vw;
+        height: calc(100vh - 20px);
+        width: 40vw;
         opacity: 0;
         transition: opacity 0.3s ease;
         pointer-events: none;

@@ -100,6 +100,7 @@ export class ParallaxEffect {
         if (!this.isUpdateScheduled) {
             this.isUpdateScheduled = true;
             requestAnimationFrame(this.performUpdate);
+            
         }
     }
 
