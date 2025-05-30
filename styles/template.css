@@ -991,3 +991,66 @@ footer {
         padding: 1rem 0;
     }
 }
+/* PRELOADER TEMPLATE
+
+#preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      z-index: 9999;
+      transition: opacity 1s ease;
+    }
+
+    .overload {
+      display: none;
+    }
+
+    .bar {
+      width: 10px;
+      height: 40px;
+      animation: bounce 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+    }
+
+    .bar1 {
+      background: #fb321f;
+      
+      animation-delay: 0s;
+    }
+
+    .bar2 {
+      background: #f2b600;
+ 
+      animation-delay: 0.1s;
+    }
+
+    .bar3 {
+      background: #00bbe4;
+
+      animation-delay: 0.2s;
+    }
+
+    .bar4 {
+      background: #00e196;
+ 
+      animation-delay: 0.3s;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: scaleY(1);
+      }
+
+      50% {
+        transform: scaleY(2);
+      }
+    }
+*/

@@ -55,6 +55,34 @@ body {
     background: rgb(113, 113, 113);
 }
 
+h1 {
+    font-size: clamp(40px, 5vw, 100px);
+    transform: translateX(10px);
+    margin: 1rem 0;
+    color: rgb(246, 208, 139);
+}
+
+h1:hover {
+    color: rgb(255, 241, 216);
+}
+
+h2 {
+    padding: 20px;
+}
+
+.reveal-text {
+    opacity: 0;
+    transform: translateY(60px);
+    pointer-events: none;
+    transition: opacity 1s ease, transform 1s ease;
+    will-change: opacity, transform;
+}
+
+.reveal-text.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
 
 .burger {
     display: none;
@@ -107,18 +135,6 @@ nav {
 #nav-links a.active {
     font-weight: bold;
     border-bottom: 2px solid #f4442e;
-}
-
-
-h1 {
-    font-size: clamp(40px, 5vw, 100px);
-    transform: translateX(10px);
-    margin: 1rem 0;
-    color: rgb(246, 208, 139);
-}
-
-h1:hover {
-    color: rgb(255, 241, 216);
 }
 
 .icon {
@@ -281,9 +297,7 @@ section {
     background: var(--ressource-1);
 }
 
-h2 {
-    padding: 20px;
-}
+
 
 .projects-wrapper {
     perspective: 1000px;
@@ -374,33 +388,39 @@ h2 {
     transform-style: preserve-3d;
     position: relative;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
 }
 
-.carousel-controls {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    pointer-events: none;
-    min-width: 400px
-}
 
-.carousel-controls button {
-    pointer-events: all;
-    background-color: rgb(169, 43, 43);
+
+button {
     color: rgb(255, 255, 255);
+    pointer-events: all;
     border: none;
     font-size: 4rem;
     cursor: pointer;
     width: inherit;
-    border-radius: 10px;
-    width: 50px;
-    border: solid rgba(108, 19, 19, 0.789);
+    border-radius: 20px;
+    width: 60px;
+    margin-top: -60px;
+    position: relative;
+    z-index: 1;
+    background: #870000;
+    background: radial-gradient(circle,rgb(255, 0, 0) 0%, rgb(163, 0, 33) 100%);
+    border: solid 2px rgba(108, 19, 19, 0.789);
 }
 
-.carousel-controls button:active {
+#carousel-left {
+
+    margin-right: 150px;
+}
+
+#carousel-right {
+
+    margin-left: 150px;
+}
+
+button:active {
     transform: scale(1.05);
     animation: transform 0.1s linear;
 }
@@ -527,21 +547,6 @@ h2 {
 }
 
 
-
-.reveal-text {
-    opacity: 0;
-    transform: translateY(60px);
-    pointer-events: none;
-    transition: opacity 1s ease, transform 1s ease;
-    will-change: opacity, transform;
-}
-
-.reveal-text.visible {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-}
-
 .warp-presentation {
     overflow-y: auto;
     height: 99.9vh;
@@ -550,9 +555,6 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
     padding: 10vw 12vw 10vw 12vw;
-    position: relative;
-    background-attachment: fixed;
-    background-size: cover;
 }
 
 
@@ -569,8 +571,8 @@ h2 {
     margin: 10px;
     padding: 10px;
     background: #3f9afb;
-background: radial-gradient(circle,rgba(63, 154, 251, 1) 0%, rgba(70, 191, 252, 1) 100%);
-   
+    background: radial-gradient(circle, rgba(63, 154, 251, 1) 0%, rgba(70, 191, 252, 1) 100%);
+
 }
 
 
@@ -980,6 +982,16 @@ footer {
 @media (max-height:420px) {
     .project {
         aspect-ratio: 5/ 4;
+    }
+}
+
+@media (max-width:480px) {
+    button{
+        margin-top: 130px;
+    }
+    #carousel-left {
+
+        margin-right: 0px;
     }
 }
 
