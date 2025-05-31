@@ -39,7 +39,7 @@
     --ressource-2: #E7BBE3;
     --ressource-3: #d376cb;
 
-    /* px-footer */
+    /* footer */
     --footer-color: cadetblue;
 }
 
@@ -250,9 +250,7 @@ section {
             var(--ressource-3) 66.66% 100%);
 }
 
-.px-footer {
-    background: var(--footer-color);
-}
+
 
 #welcome {
     z-index: 7;
@@ -808,7 +806,7 @@ button:active {
 }
 
 .portfolio-footer {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--footer-color);
     backdrop-filter: blur(10px);
     padding: 2rem 1rem;
     color: #eee;
