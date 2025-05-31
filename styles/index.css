@@ -204,7 +204,7 @@ section {
     text-shadow: none;
     color: rgba(255, 255, 255, 0.109);
     font-weight: 600;
-    font-size: 12vw;
+    font-size: 10vw;
     height: 100%;
 }
 
@@ -879,7 +879,6 @@ button:active {
     cursor: default;
     image-rendering: crisp-edges;
 }
-
 
 footer {
     height: 100vh;
