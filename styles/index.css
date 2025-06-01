@@ -841,6 +841,7 @@ button:active {
     height: 450px;
     border: solid 10px rgb(236, 181, 1);
     image-rendering: optimizeSpeed;
+    min-width: 400px;
 }
 
 
