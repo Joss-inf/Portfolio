@@ -162,7 +162,7 @@ const App: React.FC = () => {
           ${loadingState !== 'initial' ? 'opacity-100 scale-100' : 'opacity-0 scale-110'}
         `}
         style={{ 
-           backgroundImage: 'url(/portfolio/assets/background/background.webp)',
+           backgroundImage: 'url(/Portfolio/assets/background/background.webp)',
         }}
       >
         <div className="absolute inset-0 bg-black/10" />

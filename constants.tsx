@@ -41,7 +41,7 @@ export const APPS: AppDefinition[] = [
   },
 ];
 
-const projectFolder = "/portfolio/assets/projects/";
+const projectFolder = "/Portfolio/assets/projects/";
 
 export const PROJECTS: Project[] = [
   {
@@ -214,7 +214,7 @@ export const GALLERY_IMAGES: GalleryImage[] = imageSources.map(src => ({
 }));
 
 export const PROFILE:Profile =  {
-  avatar: "/portfolio/assets/profile/profile.webp",
+  avatar: "/Portfolio/assets/profile/profile.webp",
   name:'Bessière Josselin',
   job:'Développeur web fullstack',
   introduction:"Je veux construire les projets que j'aime "
