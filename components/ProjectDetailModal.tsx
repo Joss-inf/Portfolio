@@ -111,7 +111,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project,
           </div>
         </div>
 
-        {/* 2. Info Bar (TES SLIDERS DE BADGES) */}
+        {/* 2. Info Bar */}
         <div className="p-4 md:px-6 md:py-4 border-b border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-white/5">
             <Swiper
                 modules={[FreeMode, Mousewheel, Autoplay]}
@@ -121,7 +121,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project,
                 mousewheel={true}
                 className="w-full"
             >
-                {/* Badge de catégorie déplacé ici */}
+                {/* Badge de catégorie */}
                 <SwiperSlide className="!w-auto">
                     <span className="px-3 py-1.5 rounded-full bg-blue-500 text-white text-[10px] font-bold uppercase tracking-widest flex items-center">
                         {project.category}
@@ -158,14 +158,14 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project,
             {project.description}
           </p>
 
-          {/* Slider Tech Stack (Si tu veux aussi un slider ici) */}
-          <div className="mb-8">
+          {/* Slider Tech Stack */}
+          <div className="mb-2 p-1">
             <Swiper
                 modules={[FreeMode, Mousewheel]}
                 spaceBetween={8}
                 slidesPerView={'auto'}
                 freeMode={true}
-                className="w-full "
+                className="w-full pt-3 pb-4 "
             >
                 {project.tech.map((t, i) => (
                 <SwiperSlide key={i} className="!w-auto">
@@ -178,7 +178,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project,
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-wrap gap-3 pb-4">
+          <div className="flex flex-wrap gap-3 ">
               <CompactLink href={project.liveUrl} icon={<ExternalLink size={16}/>} label="Live Preview" />
               <CompactLink href={project.sourceCodeUrl} icon={<Code2 size={16}/>} label="Source Code" />
           </div>
