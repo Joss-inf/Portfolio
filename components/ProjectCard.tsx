@@ -54,7 +54,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) =>
               </span>
             )}
           </div>
-          <button className="w-8 h-8 rounded-full bg-gray-900 dark:bg-white group-hover:bg-ios-primary transition-colors flex items-center justify-center text-white dark:text-black shadow-lg">
+          <button className="w-8 h-8 rounded-full bg-gray-900 dark:bg-gray-400 group-hover:bg-ios-primary transition-colors flex items-center justify-center text-white dark:text-black shadow-lg">
             <ArrowRight size={16} />
           </button>
         </div>
